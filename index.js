@@ -56,8 +56,8 @@ const links = [
       { name: "spaceship域名", url: "https://www.spaceship.com/zh/" },
       { name: "IP查询", url: "https://ip.sb/" },
       { name: "谷歌翻译", url: "https://translate.google.cn/?hl=zh-CN" },
-      { name: "Base64", url: "https://5iux.cn/base64/" },
-      { name: "站长Ping", url: "https://www.itdog.cn/ping" },
+      { name: "傻豆包", url: "https://www.doubao.com/chat/" },
+      { name: "傻元宝", url: "https://yuanbao.tencent.com/" },
       { name: "阿里矢量图标", url: "https://www.iconfont.cn/" },
       { name: "ChatGPT", url: "https://chatgpt.com" }
     ]
