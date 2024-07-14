@@ -26,7 +26,7 @@ const links = [
       { name: "临时邮箱", url: "https://email.ml/" },
       { name: "A姐", url: "https://www.ahhhhfs.com/" },
       { name: "us.kg", url: "https://nic.us.kg/" },
-      { name: "音乐磁场", url: "https://www.hifini.com/" }
+      { name: "Z-Library", url: "https://zh.go-to-library.sk/" }
     ]
   },
   {
