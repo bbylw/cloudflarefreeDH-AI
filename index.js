@@ -1,7 +1,3 @@
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request));
-});
-
 const links = [
   {
     name: "搜索引擎",
@@ -84,18 +80,19 @@ const links = [
   }
 ];
 
-async function handleRequest(request) {
-  const html = generateHTML(links);
-  return new Response(html, {
-    headers: {
-      'Content-Type': 'text/html;charset=UTF-8',
-    },
-  });
-}
-
 function generateHTML(links) {
   let html = `
-      `;
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航页</title>
+    </head>
+    <body>
+      <div class="container">
+        <h1 style="text-align: center;">导航页</h1>
+  `;
 
   links.forEach(category => {
     html += `
@@ -116,7 +113,22 @@ function generateHTML(links) {
 
   html += `
       </div>
-    `;
+    </body>
+    </html>
+  `;
 
   return html;
+}
+
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
+
+async function handleRequest(request) {
+  const html = generateHTML(links);
+  return new Response(html, {
+    headers: {
+      'Content-Type': 'text/html;charset=UTF-8',
+    },
+  });
 }
