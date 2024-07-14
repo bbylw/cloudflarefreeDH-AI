@@ -80,49 +80,30 @@ const links = [
   }
 ];
 
-function generateHTML(links) {
-  let html = `
-    <!DOCTYPE html>
-    <html lang="zh-CN">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>导航页</title>
-    </head>
-    <body>
-      <div class="container">
-        <h1 style="text-align: center;">导航页</h1>
-  `;
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.container');
 
   links.forEach(category => {
-    html += `
-      <div class="category">
-        <h2>${category.name}</h2>
-        <div class="links">
-    `;
+    const categoryDiv = document.createElement('div');
+    categoryDiv.classList.add('category');
+
+    const categoryTitle = document.createElement('h2');
+    categoryTitle.textContent = category.name;
+    categoryDiv.appendChild(categoryTitle);
+
+    const linksDiv = document.createElement('div');
+    linksDiv.classList.add('links');
+
     category.bigFly.forEach(link => {
-      html += `
-        <a class="link" href="${link.url}" target="_blank">${link.name}</a>
-      `;
+      const linkElement = document.createElement('a');
+      linkElement.classList.add('link');
+      linkElement.href = link.url;
+      linkElement.textContent = link.name;
+      linkElement.target = "_blank"; // 在新标签页中打开链接
+      linksDiv.appendChild(linkElement);
     });
-    html += `
-        </div>
-      </div>
-    `;
+
+    categoryDiv.appendChild(linksDiv);
+    container.appendChild(categoryDiv);
   });
-
-  html += `
-      </div>
-    </body>
-    </html>
-  `;
-
-  return html;
-}
-
-// 使用页面请求上下文替换 fetch 事件监听器
-window.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.container');
-  const html = generateHTML(links);
-  container.innerHTML = html;
 });
