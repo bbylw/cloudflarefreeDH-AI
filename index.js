@@ -87,7 +87,7 @@ function generateHTML(links) {
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>导航页</title>
+   <title>导航页</title>
     </head>
     <body>
       <div class="container">
@@ -120,15 +120,9 @@ function generateHTML(links) {
   return html;
 }
 
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request));
-});
-
-async function handleRequest(request) {
+// 使用页面请求上下文替换 fetch 事件监听器
+window.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.container');
   const html = generateHTML(links);
-  return new Response(html, {
-    headers: {
-      'Content-Type': 'text/html;charset=UTF-8',
-    },
-  });
-}
+  container.innerHTML = html;
+});
