@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>导航页</title>
- <style>
+  <title>导航页</title>
+  <meta name="description" content="一个现代和科技风格的导航页面，包含各种实用链接。">
+  <meta name="keywords" content="导航页, 搜索引擎, 个人网站, 新大陆, 网盘, 邮箱, 工具, 开发">
+  <meta name="author" content="你的名字">
+  <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -14,6 +17,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      padding: 20px;
     }
     .container {
       max-width: 1200px;
@@ -35,8 +39,8 @@
       margin-bottom: 20px;
     }
     .links {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
     }
     .link {
@@ -52,33 +56,23 @@
       align-items: center;
       font-size: 1.2em;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      flex: 1 1 calc(25% - 20px);
+      box-sizing: border-box;
     }
     .link:hover {
       background-color: rgba(255, 255, 255, 0.3);
       transform: translateY(-5px);
     }
     @media (max-width: 768px) {
-      .links {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 10px;
-      }
       .link {
-        padding: 10px;
         font-size: 1em;
+        flex: 1 1 calc(50% - 20px);
       }
     }
     @media (max-width: 480px) {
-      .links {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        padding: 10px;
-      }
       .link {
-        padding: 10px;
         font-size: 1em;
-        width: 100%;
-        box-sizing: border-box;
+        flex: 1 1 100%;
       }
     }
   </style>
@@ -86,8 +80,7 @@
 <body>
   <div class="container">
     <h1 style="text-align: center;">导航页</h1>
-    <!-- 这里将包含由 index.js 动态生成的链接 -->
   </div>
- <script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
