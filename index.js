@@ -68,7 +68,7 @@ const links = [
       { name: "site域名转发", url: "https://www.site.ac/" },
       { name: "Github", url: "https://github.com/" },
       { name: "Codepen", url: "https://codepen.io/" },
-      { name: "吾爱破解", url: "https://www.52pojie.cn/" },
+      { name: "Ai创作websim", url: "https://websim.ai/" },
       { name: "SF思否", url: "https://segmentfault.com/" },
       { name: "CdnJs", url: "https://cdnjs.com/" },
       { name: "Font A.", url: "https://fontawesome.com/icons?d=gallery&m=free" },
