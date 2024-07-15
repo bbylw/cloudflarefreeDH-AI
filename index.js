@@ -58,7 +58,7 @@ const links = [
       { name: "谷歌翻译", url: "https://translate.google.cn/?hl=zh-CN" },
       { name: "傻豆包", url: "https://www.doubao.com/chat/" },
       { name: "傻元宝", url: "https://yuanbao.tencent.com/" },
-      { name: "阿里矢量图标", url: "https://www.iconfont.cn/" },
+      { name: "图床", url: "https://img.186404.xyz/" },
       { name: "ChatGPT", url: "https://chatgpt.com" }
     ]
   },
