@@ -52,7 +52,7 @@ const links = [
   {
     name: "工具",
     bigFly: [
-      { name: "Miku工具", url: "https://tools.miku.ac/" },
+      { name: "freedomain免费域名", url: "https://freedomain.one/" },
       { name: "spaceship域名", url: "https://www.spaceship.com/zh/" },
       { name: "IP查询", url: "https://ip.sb/" },
       { name: "谷歌翻译", url: "https://translate.google.cn/?hl=zh-CN" },
